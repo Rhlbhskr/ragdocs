@@ -1,0 +1,30 @@
+# Import this repository as a Render Blueprint. This uses a paid persistent disk.
+# Semantic embeddings and reranking are enabled; review plan cost before provisioning.
+services:
+  - type: web
+    name: groundeddocs
+    runtime: docker
+    plan: standard
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    disk:
+      name: grounded-data
+      mountPath: /app/data
+      sizeGB: 10
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:////app/data/grounded.db
+      - key: QDRANT_PATH
+        value: /app/data/qdrant
+      - key: EMBEDDING_BACKEND
+        value: sentence-transformers
+      - key: ENABLE_RERANKER
+        value: "true"
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: LLM_BASE_URL
+        sync: false
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        sync: false

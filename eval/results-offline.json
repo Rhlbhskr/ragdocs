@@ -1,0 +1,368 @@
+{
+  "embedding_backend": "hash",
+  "generation": "extractive",
+  "questions": 10,
+  "limitations": "Tiny synthetic corpus; many documents fit one chunk. Not a production benchmark. Faithfulness and relevance are lexical proxies. Latency excludes ingestion, model loading, and remote LLM calls.",
+  "results": [
+    {
+      "chunk_size": 256,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 3,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.9376599999086466,
+      "p95_latency_ms": 1.4506999996228842
+    },
+    {
+      "chunk_size": 256,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 5,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.8837499998662679,
+      "p95_latency_ms": 0.9257000001525739
+    },
+    {
+      "chunk_size": 256,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 10,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.8819999999104766,
+      "p95_latency_ms": 0.92549999953917
+    },
+    {
+      "chunk_size": 256,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 3,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 256,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 5,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 256,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 10,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 256,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 3,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.3382700002694037,
+      "p95_latency_ms": 1.3846000001649372
+    },
+    {
+      "chunk_size": 256,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 5,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.342900000145164,
+      "p95_latency_ms": 1.5106999999261461
+    },
+    {
+      "chunk_size": 256,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 10,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.2880700001915102,
+      "p95_latency_ms": 1.586200000019744
+    },
+    {
+      "chunk_size": 256,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 3,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 256,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 5,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 256,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 10,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 512,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 3,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.853969999934634,
+      "p95_latency_ms": 0.978699999905075
+    },
+    {
+      "chunk_size": 512,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 5,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.8662499999445572,
+      "p95_latency_ms": 0.9380000001328881
+    },
+    {
+      "chunk_size": 512,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 10,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.8510100000421517,
+      "p95_latency_ms": 0.8821000001262291
+    },
+    {
+      "chunk_size": 512,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 3,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 512,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 5,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 512,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 10,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 512,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 3,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.2595099998179649,
+      "p95_latency_ms": 1.4506999996228842
+    },
+    {
+      "chunk_size": 512,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 5,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.2104799999178795,
+      "p95_latency_ms": 1.3049999997747364
+    },
+    {
+      "chunk_size": 512,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 10,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.2773700000252575,
+      "p95_latency_ms": 1.4067000001887209
+    },
+    {
+      "chunk_size": 512,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 3,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 512,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 5,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 512,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 10,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 3,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.8389099998566962,
+      "p95_latency_ms": 0.9405999999216874
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 5,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.9939099999428436,
+      "p95_latency_ms": 1.362100000733335
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "dense",
+      "rerank": false,
+      "top_k": 10,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 0.9231300000465126,
+      "p95_latency_ms": 0.9806999996726518
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 3,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 5,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "dense",
+      "rerank": true,
+      "top_k": 10,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 3,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.2856199997258955,
+      "p95_latency_ms": 1.3571999998021056
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 5,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.2939899999764748,
+      "p95_latency_ms": 1.4025000000401633
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "hybrid",
+      "rerank": false,
+      "top_k": 10,
+      "status": "measured",
+      "recall_at_k": 1.0,
+      "mrr": 0.95,
+      "faithfulness_token_overlap_proxy": 0.8686500769353062,
+      "answer_expected_phrase_proxy": 1.0,
+      "mean_latency_ms": 1.3783199999124918,
+      "p95_latency_ms": 1.6264000005321577
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 3,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 5,
+      "status": "skipped: model not enabled"
+    },
+    {
+      "chunk_size": 1024,
+      "mode": "hybrid",
+      "rerank": true,
+      "top_k": 10,
+      "status": "skipped: model not enabled"
+    }
+  ]
+}

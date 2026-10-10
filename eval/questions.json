@@ -1,0 +1,12 @@
+[
+  {"question":"What is the home office equipment allowance?","document":"Remote-work-policy.txt","evidence":"$750","answer":"$750"},
+  {"question":"How many remote days per week are allowed?","document":"Remote-work-policy.txt","evidence":"three days per week","answer":"three days"},
+  {"question":"What are the core collaboration hours?","document":"Remote-work-policy.txt","evidence":"10:00 to 15:00","answer":"10:00 to 15:00"},
+  {"question":"How soon must lost devices be reported?","document":"Remote-work-policy.txt","evidence":"within one hour","answer":"one hour"},
+  {"question":"How much paid annual leave do employees receive?","document":"Benefits-guide.txt","evidence":"25 days","answer":"25 days"},
+  {"question":"What is the annual learning budget?","document":"Benefits-guide.txt","evidence":"$1,500","answer":"$1,500"},
+  {"question":"When must carried annual leave be used?","document":"Benefits-guide.txt","evidence":"March 31","answer":"March 31"},
+  {"question":"How often are production database backups taken?","document":"Platform-handbook.txt","evidence":"run hourly","answer":"hourly"},
+  {"question":"How long are daily encrypted snapshots retained?","document":"Platform-handbook.txt","evidence":"30 days","answer":"30 days"},
+  {"question":"How quickly must the on-call engineer acknowledge severity one incidents?","document":"Platform-handbook.txt","evidence":"within 15 minutes","answer":"15 minutes"}
+]

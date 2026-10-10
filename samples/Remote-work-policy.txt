@@ -1,0 +1,15 @@
+NORTHSTAR / SAMPLE DOCUMENT
+Remote Work Policy — Version 2.1, January 2026
+This is fictional demonstration material, not an actual company policy.
+
+Eligibility and schedule
+Full-time employees may work remotely up to three days per week after completing their first 30 days. Team leads approve the weekly schedule. Tuesday and Thursday are recommended collaboration days in the office. Employees must be available during core collaboration hours of 10:00 to 15:00 in their team's primary time zone.
+
+Equipment and expenses
+Each eligible employee receives a one-time home office equipment allowance of $750. Eligible purchases include a monitor, keyboard, ergonomic chair, and headset. Submit itemized receipts through the expense portal within 60 days of purchase. Internet service and rent are not reimbursable under this allowance. The company supplies a managed laptop separately.
+
+Security
+Remote employees must use the company VPN on public networks and enable multi-factor authentication. Customer data must remain on company-managed devices. Lost devices must be reported to the security team within one hour of discovery.
+
+Working internationally
+Working from another country requires approval from People Operations at least 20 business days before travel. Approved international remote work is limited to 15 working days per calendar year. Approval depends on tax, immigration, and customer-contract constraints.

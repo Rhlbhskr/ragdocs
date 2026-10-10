@@ -1,0 +1,12 @@
+NORTHSTAR / SAMPLE DOCUMENT
+Platform Handbook — January 2026
+This fictional technical handbook is included for demonstration only.
+
+Service objectives
+The document API targets 99.9 percent monthly availability. Planned maintenance is announced at least 48 hours in advance. The target recovery time is four hours and the target recovery point is one hour.
+
+Backups and retention
+Production database backups run hourly. Daily encrypted snapshots are retained for 30 days. A restore drill is performed every quarter. Uploaded documents are deleted within seven days of a customer deletion request, and corresponding backup snapshots expire according to the 30-day retention schedule.
+
+Incident response
+Severity one incidents involve complete service unavailability or confirmed exposure of customer data. The on-call engineer acknowledges a severity one incident within 15 minutes. Status updates are posted every 30 minutes until resolution. A blameless incident review is published within five business days.

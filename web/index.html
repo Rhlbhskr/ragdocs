@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A workspace for answers grounded in your documents. Upload, ask, and inspect the evidence.">
+  <title>GroundedDocs — Answers with evidence</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="GroundedDocs home"><span class="brand-mark">g<span>↗</span></span>Grounded<span class="brand-light">Docs</span></a>
+    <div class="workspace-tag"><span class="status-dot"></span> YOUR DOCUMENT WORKSPACE <span class="tag">BETA</span></div>
+    <button id="new-chat" class="new-chat"><span>＋</span> New conversation <span class="shortcut">↗</span></button>
+    <div class="section-heading"><h2>Document library</h2><span id="document-count" class="count">0</span></div>
+    <label id="dropzone" class="dropzone" tabindex="0" role="button" for="upload">
+      <span class="upload-icon">↑</span><strong>Drop your documents here</strong><span>or <u>browse files</u></span><small id="upload-limit">PDF, DOCX, TXT</small>
+    </label><input id="upload" type="file" accept=".pdf,.docx,.txt" multiple hidden>
+    <div id="upload-status" class="muted" role="status"></div>
+    <div id="documents" class="documents"></div>
+    <details class="retrieval-settings"><summary>Retrieval settings <span>⚙</span></summary>
+      <label>Search method<select id="mode"><option value="hybrid">Hybrid · dense + BM25</option><option value="dense">Dense only</option><option value="keyword">BM25 only</option></select></label>
+      <div class="settings-row"><label>Passages<select id="top-k"><option>3</option><option selected>5</option><option>10</option></select></label><label>Chunk words<select id="chunk-size"><option>256</option><option selected>512</option><option>1024</option></select></label></div>
+      <label class="checkbox-label"><input id="rerank" type="checkbox" checked> Cross-encoder reranking</label><small id="rerank-note"></small>
+    </details>
+    <div class="sidebar-footer"><span class="privacy-icon">◈</span><div><strong>A space for your sources</strong><small>Browser-specific workspace. No sign-up.</small></div></div>
+  </aside>
+  <main>
+    <header><div class="breadcrumb">Workspace <span>/</span> <strong>Ask your documents</strong></div><a href="/docs" target="_blank" rel="noopener">API docs ↗</a></header>
+    <div class="workspace-layout">
+      <section class="conversation-panel" aria-label="Conversation">
+        <div class="conversation-heading"><div><span class="eyebrow">KNOWLEDGE, WITH RECEIPTS</span><h1>Ask. Understand. Verify.</h1><p>Your documents have the answers. Follow the evidence.</p></div><span class="live-badge"><span class="status-dot"></span> Ready to explore</span></div>
+        <div id="conversation" class="conversation" aria-live="polite">
+          <div id="welcome" class="welcome">
+            <div class="welcome-symbol"><span>≋</span><i>✦</i></div><h2>A good answer starts<br>with a trusted source.</h2><p>Upload a document or explore the sample library.<br>Every answer comes with passages you can inspect.</p>
+            <div class="suggestions"><button data-question="What is the home office equipment allowance?">What’s the home office allowance?<span>↗</span></button><button data-question="How many days of annual leave do employees receive?">How much annual leave do I get?<span>↗</span></button><button data-question="How often are production backups taken?">How often are backups taken?<span>↗</span></button></div>
+            <div class="sample-note"><span>◉</span> Three sample documents are ready to explore</div>
+          </div>
+        </div>
+        <div class="composer-area"><div id="error" role="alert" hidden></div><form id="question-form"><label class="sr-only" for="question">Ask a question about your documents</label><textarea id="question" rows="2" maxlength="2000" placeholder="Ask a question about your documents…" required></textarea><div class="composer-bottom"><span><span class="small-spark">✦</span> <span id="composer-mode">Grounded in your library</span></span><button id="send" type="submit" aria-label="Send question">↑</button></div></form><div class="composer-caption"><span>Answers backed by sources, open to verification.</span><span>Enter to send · Shift + Enter for a new line</span></div></div>
+      </section>
+      <aside class="evidence-panel" aria-label="Retrieved evidence"><div class="evidence-title"><h2><span>▤</span> Evidence explorer</h2><span id="evidence-count" class="count">0</span></div><p class="evidence-subtitle">Go beyond the answer. See what supports it.</p><div id="grounding-card" hidden></div><div id="evidence"><div class="evidence-empty"><div class="paper-stack"><span>≡</span></div><h3>Sources, not guesswork.</h3><p>Ask a question to see the retrieved passages, source documents, and grounding signals here.</p><div class="pipeline"><span>Retrieve</span><i>→</i><span>Rank</span><i>→</i><span>Ground</span></div></div></div><div class="evidence-footer"><span>ⓘ</span> A citation is a starting point. Always check the original context.</div></aside>
+    </div>
+  </main>
+  <dialog id="source-dialog"><div class="dialog-heading"><h2 id="source-name">Source document</h2><button id="close-source" aria-label="Close source">×</button></div><p class="muted">Extracted source text · layout may differ from the original</p><div id="source-content"></div></dialog>
+</body></html>
