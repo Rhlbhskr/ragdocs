@@ -94,12 +94,22 @@ if production:
         st.error('Your document library is temporarily unavailable. Please try again later.')
         st.stop()
 
+
 try:
     config = config_from_secrets(values)
     resources = get_resources(values)
 except Exception:
-    st.error('The embedding model or Qdrant connection could not initialize. Check Streamlit Secrets and your Qdrant cluster permissions. You can omit Qdrant settings and use EMBEDDING_BACKEND="hash" for an offline demo.')
+    import logging
+
+    logging.exception(
+        "GroundedDocs embedding/Qdrant initialization failed"
+    )
+    st.error(
+        "The embedding model or Qdrant connection could not initialize. "
+        "Check the app logs for the underlying error."
+    )
     st.stop()
+
 
 if 'demo' not in st.session_state:
     st.session_state.demo = DemoSession()
