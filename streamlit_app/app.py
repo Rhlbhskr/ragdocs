@@ -15,7 +15,7 @@ from app.retrieval import Retriever
 from streamlit_app.engine import config_from_secrets, DemoSession, Resources, MAX_QUESTIONS, MAX_UPLOADS
 from streamlit_app.persistence import WorkspaceStore, PersistentSession, authorize
 
-st.set_page_config(page_title='GroundedDocs — Answers with evidence', page_icon='📚', layout='wide')
+st.set_page_config(page_title='RagDocs — Answers with evidence', page_icon='📚', layout='wide')
 
 
 @st.cache_resource(show_spinner='Loading the small embedding model and connecting the vector store…')
@@ -62,7 +62,7 @@ except (FileNotFoundError, StreamlitSecretNotFoundError):
 accepted = ('GEMINI_API_KEY', 'GEMINI_MODEL', 'QDRANT_URL', 'QDRANT_API_KEY', 'EMBEDDING_BACKEND', 'ENABLE_RERANKER', 'APP_MODE')
 values = {key: secrets[key] for key in accepted if key in secrets}
 production = str(values.get('APP_MODE', 'demo')).lower() == 'production'
-st.title('GroundedDocs')
+st.title('RagDocs')
 st.caption('Upload. Ask. Verify. Answers grounded in your documents, with source passages.')
 
 @st.cache_resource
@@ -102,7 +102,7 @@ except Exception:
     import logging
 
     logging.exception(
-        "GroundedDocs embedding/Qdrant initialization failed"
+        "RagDocs embedding/Qdrant initialization failed"
     )
     st.error(
         "The embedding model or Qdrant connection could not initialize. "
